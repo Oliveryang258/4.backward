@@ -23,6 +23,5 @@ for epoch in range(100):
         l.backward()
         w.data = w.data - 0.01*w.grad.data
         w.grad.data.zero_()
-        
-print("progress:",epoch,l.item())
+        print("progress:",epoch,l.item())
 print("predict (after training)",4,forward(4,w).item())
